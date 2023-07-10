@@ -4,7 +4,40 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            try
+            {
+                StartSequence();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+            finally
+            {
+                Console.WriteLine("Program completed.");
+            }
         }
+
+        static void StartSequence()
+        {
+            Console.WriteLine();
+        }
+
+        static int GetSum(int[] numbers)
+        {
+            Console.WriteLine();
+        }
+
+        static int GetProduct(int[] numbers, int sum)
+        {
+            Console.WriteLine();
+        }
+
+
+        static decimal GetQuotient(int product)
+        {
+            Console.WriteLine();
+        }
+
     }
 }
