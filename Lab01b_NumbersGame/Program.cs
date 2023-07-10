@@ -51,6 +51,13 @@
             {
                 sum += num;
             }
+
+            if (sum < 20)
+            {
+                throw new Exception($"Value of {sum} is too low");
+            }
+
+            return sum;
         }
 
         static int GetProduct(int[] numbers, int sum)
