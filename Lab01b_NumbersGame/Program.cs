@@ -62,13 +62,32 @@
 
         static int GetProduct(int[] numbers, int sum)
         {
-            Console.WriteLine();
+            Console.Write($"Select a random number between 1 and {numbers.Length}: ");
+            int randomNumber = Convert.ToInt32(Console.ReadLine());
+
+            if (randomNumber < 1 || randomNumber > numbers.Length)
+            {
+                throw new IndexOutOfRangeException("Index out of range");
+            }
+
+            int product = sum * numbers[randomNumber - 1];
+            return product;
         }
 
 
         static decimal GetQuotient(int product)
         {
-            Console.WriteLine();
+            Console.Write($"Enter a number to divide {product} by: ");
+            decimal divisor = Convert.ToDecimal(Console.ReadLine());
+
+            if (divisor == 0)
+            {
+                Console.WriteLine("Divide by zero exception");
+                return 0;
+            }
+
+            decimal quotient = decimal.Divide(product, divisor);
+            return quotient;
         }
 
     }
